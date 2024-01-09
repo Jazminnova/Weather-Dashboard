@@ -43,3 +43,4 @@ $(".weather_btn").on("click", () => {
     //pass the coords to the current weather
     // get the weather on th epage
 });
+console.log(cat)
