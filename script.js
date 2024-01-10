@@ -1,8 +1,12 @@
 const getCurrent = async (lat, lon) => {
-    console.log(`In current ${lat,
+    console.log(`In current ${lat},
+        ${lon}
+        }`);
+    const response = await fetch('const getCurrent = async(lat,lon)=>{
+        console.log(`In current ${lat,
         lon
         }`);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=3be2b2b6acc21e3760901d15acf91f72`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=04c4575ff435a09c42db4d80fd575c86`);
     // get the body out of the response
     const weather = await response.json();
     ///log the data
@@ -22,7 +26,7 @@ const getCurrent = async (lat, lon) => {
 
 const getCoords = async (city) => {
     console.log(city);
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=3be2b2b6acc21e3760901d15acf91f72`);
+    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=04c4575ff435a09c42db4d80fd575c86`);
     // get the body out of the response
     const data = await response.json();
     // get our values
@@ -43,4 +47,3 @@ $(".weather_btn").on("click", () => {
     //pass the coords to the current weather
     // get the weather on th epage
 });
-console.log(cat)
