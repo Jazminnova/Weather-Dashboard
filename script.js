@@ -28,7 +28,7 @@ const getCurrent = async (lat, lon) => {
 const getCoords = async (city) => {
   console.log(city);
   const response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=04c4575ff435a09c42db4d80fd575c86`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=04c4575ff435a09c42db4d80fd575c86`
   );
   // get the body out of the response
   const data = await response.json();
